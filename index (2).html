@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>❤️</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;font-family:Arial,sans-serif}
+body{
+  display:grid;place-items:center;padding:30px;
+  background:radial-gradient(circle at top left,#ffd2e8 0%,#f7a7cf 35%,#c98be8 70%,#8c78d6 100%);
+  color:white;overflow-x:hidden;
+}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(40px);opacity:.35;pointer-events:none}
+body:before{width:260px;height:260px;background:#fff;top:-80px;left:-80px}
+body:after{width:300px;height:300px;background:#ff5da8;bottom:-120px;right:-90px}
+.card{
+  width:min(900px,100%);padding:55px 45px;border-radius:35px;
+  background:rgba(255,255,255,.18);backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);box-shadow:0 25px 80px rgba(95,25,90,.25);
+  text-align:center;border:1px solid rgba(255,255,255,.35)
+}
+h1{margin:0;font-size:clamp(42px,8vw,88px);text-shadow:0 5px 20px rgba(130,30,90,.35);font-weight:800;line-height:1.05}
+.subtitle{font-size:22px;margin:16px 0 30px;opacity:.95}
+.heart{font-size:72px;cursor:pointer;display:inline-block;transition:transform .2s;filter:drop-shadow(0 8px 14px rgba(130,20,80,.3));user-select:none}
+.heart:hover{transform:scale(1.08)}
+.hint{margin-top:8px;opacity:.9;font-size:15px}
+#message{display:none;margin-top:35px;text-align:left;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:35px;border-radius:25px;animation:show .6s ease}
+#message h2{text-align:center;font-size:clamp(32px,6vw,58px);margin:0 0 24px;text-shadow:0 4px 15px rgba(120,20,80,.3)}
+#message p{font-size:19px;line-height:1.75;margin:0;color:#fff}
+@keyframes show{from{opacity:0;transform:translateY(20px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:600px){.card{padding:38px 22px}.subtitle{font-size:18px}#message{padding:24px}#message p{font-size:17px;line-height:1.65}}
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>myszko kocham cie</h1>
+  <div class="subtitle">Każdy dzień z Tobą jest dla mnie czymś wyjątkowym ❤️</div>
+  <div class="heart" onclick="showMessage()" aria-label="Kliknij serduszko">❤️</div>
+  <div class="hint">kliknij serduszko ♡</div>
+
+  <section id="message">
+    <h2>Wszystkiego najlepszego z okazji naszej rocznicy ❤️</h2>
+    <p>
+      Dzisiaj jest nasz wyjątkowy dzień i chciałem Ci przypomnieć, jak bardzo jesteś dla mnie ważna. Kiedy pomyślę o tym, ile wspólnych chwil już przeżyliśmy, naprawdę trudno mi uwierzyć, jak szybko ten czas minął. Każda rozmowa, każdy śmiech, każde głupie żarty, małe kłótnie, wspólne plany i zwykłe momenty, które może dla innych nie znaczą wiele, dla mnie są czymś, do czego zawsze będę wracał z uśmiechem.
+      <br><br>
+      Kocham to, że mogę być przy Tobie sobą i że mogę dzielić z Tobą zarówno te najlepsze dni, jak i te trochę gorsze. Dziękuję Ci za cierpliwość, za wsparcie, za wszystkie chwile, kiedy potrafiłaś poprawić mi humor i za to, że po prostu jesteś. Czasami nie umiem idealnie powiedzieć, co czuję, ale chcę, żebyś wiedziała, że naprawdę bardzo mi na Tobie zależy.
+      <br><br>
+      Mam nadzieję, że to dopiero początek naszej historii i że przed nami jest jeszcze ogrom wspólnych wspomnień. Chcę z Tobą przeżywać kolejne rocznice, kolejne ważne dni, ale też te zupełnie zwyczajne wieczory, rozmowy i chwile, które z czasem okazują się najcenniejsze. Chcę się z Tobą śmiać, wspierać Cię, cieszyć się z Twoich sukcesów i być obok, kiedy czegoś potrzebujesz.
+      <br><br>
+      Dziękuję Ci za ten wspólny czas i za wszystko, co razem stworzyliśmy. Jesteś dla mnie kimś naprawdę wyjątkowym i chcę, żebyś o tym pamiętała nie tylko dzisiaj, ale każdego dnia. Mam nadzieję, że kiedyś spojrzymy wstecz na ten moment i będziemy się uśmiechać, wspominając, ile pięknych chwil jeszcze było przed nami.
+      <br><br>
+      Kocham Cię, myszko. ❤️
+    </p>
+  </section>
+</main>
+<script>
+function showMessage(){
+  const message=document.getElementById('message');
+  message.style.display='block';
+  message.scrollIntoView({behavior:'smooth',block:'start'});
+}
+</script>
+</body>
+</html>
